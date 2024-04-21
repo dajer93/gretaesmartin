@@ -36,14 +36,51 @@ body{
   min-height: 100vh;
 }
 
+h1, h2, p {
+  text-align: center;
+}
+
 h1{
   font-size: 3.2em;
   line-height: 1.1;
   font-family: "Dancing Script";
 }
 
+h2 {
+  margin: 1em 0 2em;
+}
+
 p.sub-header{
-  font-size: 28px;
+  font-size: 1.8em;
+}
+
+p.text {
+  text-align: center;
+  margin: 2em 0;
+}
+
+strong.special {
+  display: block;
+  padding: .6em 0;
+  font-size: 1.8em;
+  font-family: "Dancing Script";
+}
+
+img.map {
+  max-width: 1200px;
+  margin: 2em 0 0;
+}
+
+#date-and-venue {
+  margin: 6em 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(/weboldal-bg-3.png);
+  background-repeat: no-repeat;
+  background-position: 800px 20px;
+  background-size: 600px;
 }
 
 #top-wrapper {
@@ -59,6 +96,10 @@ p.sub-header{
 
 #main-content {
   flex: 1 0 auto;
+  background-image: url(/weboldal-bg-2.png);
+  background-repeat: no-repeat;
+  background-position: -140px 300px;
+  background-size: 600px;
 }
 
 ul {
@@ -70,6 +111,19 @@ footer {
   bottom: 0;
   width: 100vw;
   background-color: var(--sand);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+footer a {
+  display: block;
+}
+
+footer h2 {
+  margin: 1em 0;
 }
 
 .container {
