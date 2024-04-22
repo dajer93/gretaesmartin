@@ -41,9 +41,10 @@ h1, h2, p {
 }
 
 h1{
-  font-size: 3.2em;
+  font-size: 5vw;
   line-height: 1.1;
   font-family: "Dancing Script";
+  margin-bottom: .2em;
 }
 
 h2 {
@@ -51,7 +52,7 @@ h2 {
 }
 
 p.sub-header{
-  font-size: 1.8em;
+  font-size: 2vw;
 }
 
 p.text {
@@ -71,35 +72,109 @@ img.map {
   margin: 2em 0 0;
 }
 
+.decor-flowers,
+.decor-dots,
+.decor-dots-2 {
+  position: absolute;
+}
+
+.decor-flowers {
+  width: 40vw;
+  height: 40vw;
+  left: -10vw;
+  top: 2vw;
+  background-image: url(/weboldal-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(30deg);
+}
+
+.decor-dots {
+  width: 34vw;
+  height: 34vw;
+  right: -10vw;
+  top: 10vw;
+  background-image: url(/weboldal-bg-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-90deg);
+}
+
+.decor-dots-2 {
+  z-index: -1;
+  width: 50vw;
+  height: 50vw;
+  left: -20vw;
+  top: 60vw;
+  background-image: url(/weboldal-bg-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(60deg);
+}
+
+#eskuvoi-kep {
+  width: 50%;
+  position: absolute;
+  margin-top: 300px;
+}
+
 #date-and-venue {
+  z-index: 11;
   margin: 6em 0 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-image: url(/weboldal-bg-3.png);
-  background-repeat: no-repeat;
-  background-position: 800px 20px;
-  background-size: 600px;
 }
 
 #top-wrapper {
-  background-color: var(--pastel-green-light);
-}
-
-#top-section{
+  min-height: 700px;
   max-width: 1280px;
+  z-index: 10;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 #main-content {
   flex: 1 0 auto;
-  background-image: url(/weboldal-bg-2.png);
-  background-repeat: no-repeat;
-  background-position: -140px 300px;
-  background-size: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#counter {
+  position: relative;
+  background-color: var(--main-color);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#counter .mar-csak {
+  font-family: "Dancing Script";
+  font-size: 2em;
+  transform: rotate(-10deg);
+  position: absolute;
+  color: var(--background-color);
+  top: 60px;
+  left: 100px;
+}
+
+#countdown {
+  margin: 6vw 0;
+  align-items: center;
+  color: var(--background-color);
+  font-size: 4vw;
+}
+
+#rsvp {
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  align-items: center;
 }
 
 ul {
