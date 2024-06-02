@@ -12,8 +12,6 @@
   </head>
   <body>
     <div id="main-content">
-      <img id="eskuvoi-kep" src="ESKUVOI-BEZS.png" alt="Gréta és Martin">
-      <div class="decor-flowers"></div>
       <div class="decor-dots"></div>
       <div class="decor-dots-2"></div>
       <div id="top-wrapper">
@@ -23,13 +21,14 @@
           Vasszécseny, Új-Ebergényi Kastélyszálló</p>
         </div>
       </div>
+      <div id="top-image"></div>
     </div>
     <div id="counter">
       <span class="mar-csak">Már csak</span>
       <p id="countdown"></p>
     </div>
     <div id="rsvp">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFyH-z5xwuOpqmuE2L7PELIn0rvnZ8AkauLioaOXP8bQn_pw/viewform?embedded=true" width="640" height="1450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScFyH-z5xwuOpqmuE2L7PELIn0rvnZ8AkauLioaOXP8bQn_pw/viewform?embedded=true" width="640" height="1450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     <!-- <div id="date-and-venue">
       <img class="map" src="eskuvoi-helyszin-terkep.png" alt="Esküvői helyszín a térképen">
@@ -42,39 +41,6 @@
         <a href="mailto:martin.varnai@gmail.com">martin.varnai@gmail.com</a>
       </div>
     </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Set the date we're counting down to
-        const countDownDate = new Date("2024-10-04T16:00:00").getTime();
-
-        // Update the count down every 1 second
-        const x = setInterval(function() {
-
-            // Get today's date and time
-            const now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            const distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in an element with id="countdown"
-            const text = months + " hónap " + days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
-
-            console.error(text);
-            document.getElementById("countdown").innerHTML = text;
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-            }
-        }, 1000);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
