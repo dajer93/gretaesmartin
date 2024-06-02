@@ -3,7 +3,7 @@
   --pastel-green: #768F73;
   --pastel-green-light: #BCC9BB;
   --background-color: #F7F7F2;
-  --sand: #CEB484;
+  --sand: #c9c0b0;
   --highlight: #72082D;
   
   font-family: Roboto, Arial, sans-serif;
@@ -113,7 +113,6 @@ img.map {
 }
 
 #eskuvoi-kep {
-  
   width: 50%;
   position: absolute;
   margin-top: 300px;
@@ -132,8 +131,9 @@ img.map {
   max-width: 1280px;
   z-index: 10;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 10rem 2rem 4rem;
   text-align: center;
+  text-shadow: 1px 1px 8px black;
 }
 
 #main-content {
@@ -142,6 +142,12 @@ img.map {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  background-image: url(/bg-3-gs.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-position: bottom;
+  color: var(--background-color);
 }
 
 #main-content #top-image {
@@ -158,7 +164,6 @@ img.map {
 
 #counter {
   position: relative;
-  background-color: var(--main-color);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -169,8 +174,7 @@ img.map {
   font-family: "Dancing Script";
   font-size: 2em;
   transform: rotate(-10deg);
-  color: var(--background-color);
-  text-shadow: 2px 2px var(--main-color);
+  color: black;
   position:relative;
   top: 0;
   left: 40px;
@@ -181,6 +185,7 @@ img.map {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, .5fr);
   max-width: 1080px;
+  color: black;
 }
 
 #counter .textGrid .item {
@@ -234,13 +239,13 @@ img.map {
   z-index: 11;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
+  background-color: transparent;
   align-items: center;
 
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 1450px;
+  height: 1480px;
 }
 
 #rsvp .responsive-iframe {
@@ -268,6 +273,7 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-bottom: 2em;
+  margin-top: 20px;
 }
 
 footer a {
@@ -280,4 +286,48 @@ footer h2 {
 
 .container {
   max-width: 1280px;
+}
+
+#images {
+  height: 440px;
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+}
+
+#images .image {
+  position: relative;
+  top: 26px;
+  margin: 20px;
+  height: 360px;
+  width: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#images .image:nth-child(1) {
+  background-image: url(/dekor-1.jpg);
+}
+#images .image:nth-child(2) {
+  background-image: url(/dekor-2.jpg);
+}
+#images .image:nth-child(3) {
+  background-image: url(/bg-2.jpg);
+}
+
+#bottom-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bottom-section .bg-stripe {
+  width: 690px;
+  height: 1880px;
+  background: var(--highlight);
+  position: absolute;
+}
+
+#venue-and-date h2 {
+  color: var(--highlight);
 }
