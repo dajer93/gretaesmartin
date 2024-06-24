@@ -120,7 +120,7 @@ img.map {
 
 #date-and-venue {
   z-index: 11;
-  margin: 6em 0 2em;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,11 +144,11 @@ img.map {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background-image: url(/bg-3-corrected.jpg);
+  background-image: url(/bg-4-lg-cut.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
-  background-position: bottom;
+  background-position: 0 30%;
   color: var(--background-color);
   position: relative;
 }
@@ -198,16 +198,22 @@ img.map {
   font-size: 6vw;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1080px) {
+  #main-content {
+    height: 400px;
+  }
   h1{
-    font-size: 32px;
+    font-size: 40px;
   }
   p.sub-header{
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 1080px) {
+  #main-content {
+    height: 600px;
+  }
   #counter .mar-csak {
     top: -60px;
     left: 30%;
@@ -248,7 +254,7 @@ img.map {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 1480px;
+  height: 2240px;
 }
 
 #rsvp .responsive-iframe {
@@ -276,7 +282,6 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-bottom: 2em;
-  margin-top: 20px;
 }
 
 footer a {
@@ -309,13 +314,13 @@ footer h2 {
 }
 
 #images .image:nth-child(1) {
-  background-image: url(/dekor-1.jpg);
+  background-image: url(/middle-imgs-1.jpg);
 }
 #images .image:nth-child(2) {
-  background-image: url(/dekor-2.jpg);
+  background-image: url(/middle-imgs-2.jpg);
 }
 #images .image:nth-child(3) {
-  background-image: url(/bg-2.jpg);
+  background-image: url(/middle-imgs-3.jpg);
 }
 
 #bottom-section {
@@ -326,7 +331,7 @@ footer h2 {
 
 #bottom-section .bg-stripe {
   width: 690px;
-  height: 1880px;
+  height: 2650px;
   background: var(--highlight);
   position: absolute;
 }
